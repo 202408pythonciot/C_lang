@@ -3,6 +3,10 @@
 
 #define TRUE 1
 #define FALSE 0
+#define LOOP_DELAY (50)
+#define SPEED_INIT (50)
+#define SPEED_MAX (5)
+
 enum _KEY {
     KEY_UP = 1,
     KEY_LEFT,
@@ -71,9 +75,9 @@ const int BLOCK[BLOCK_TYPE_MAX][BLOCK_STYLE_MAX][BLOCK_AREA][BLOCK_AREA] =
             {0, 0, 0, 0}
         },
         {
-            {0, 1, 0, 0},
-            {1, 1, 0, 0},
-            {1, 0, 0, 0},
+            {0, RED, 0, 0},
+            {RED, RED, 0, 0},
+            {RED, 0, 0, 0},
             {0, 0, 0, 0}
         }
     },
@@ -249,6 +253,8 @@ int CURRENT_BLOCK_X;
 int CURRENT_BLOCK_Y;
 int SPEED;
 int SCORE;
+int LEVEL;
+int LEVEL_B;
 void clear(void) {
     printf("\x1b[2J");
 }
@@ -263,6 +269,8 @@ int init(void) {
     srand(0);
     GAME_STATUS = GAME_INIT;
     SCORE = 0;
+    LEVEL = 1;
+    LEVEL_B = 1;
     // フィールドの初期化
     for (int y = 0; y < FIELD_HEIGHT; y += 1) {
         for (int x = 0; x < FIELD_WIDTH; x += 1) {
@@ -282,7 +290,7 @@ int init(void) {
     CURRENT_BLOCK_STYLE = BLOCK_STYLE_R0;
     CURRENT_BLOCK_X = 5;
     CURRENT_BLOCK_Y = 0;
-    SPEED = 50;
+    SPEED = SPEED_INIT;
 }
 
 void drawNextBlock(void) {
@@ -477,6 +485,14 @@ void execLineCheck(void) {
         SCORE = SCORE + 100;
         break;
     }
+    LEVEL = SCORE / 100 + 1;
+    if ((LEVEL != LEVEL_B) && (SPEED > SPEED_MAX)) {
+        SPEED -= 5;
+    }
+    if (SPEED < SPEED_MAX) {
+        SPEED = SPEED_MAX;
+    }
+    LEVEL_B = LEVEL;
 }
 
 void drawMessage(void) {
@@ -493,6 +509,8 @@ void drawMessage(void) {
         break;
     }
     cursor(15, 4);
+    printf("LEVEL: %d", LEVEL);
+    cursor(15, 5);
     printf("SCORE: %d", SCORE);
 }
 void loop(void) {
@@ -514,7 +532,7 @@ void loop(void) {
         drawNextBlock();
         drawField();
         drawMessage();
-        Sleep(50);
+        Sleep(LOOP_DELAY);
         count += 1;
     }
 }
