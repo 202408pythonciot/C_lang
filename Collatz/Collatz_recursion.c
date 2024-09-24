@@ -8,9 +8,10 @@
 
 int solve_collatz(int n) {
     printf(" %lu", n);
-    if (n == 1) {
-        return 1;
-    }else if (n & 1) {  // 奇数
+    if (n < 2) {
+        return n;
+    }
+    else if (n & 1) {  // 奇数
         if (n > LIMIT) {
             printf("\nOverflow\n");
             return 0;
