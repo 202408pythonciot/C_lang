@@ -1,10 +1,10 @@
+2500以下の整数の素因数分解を行って画面に表示するプログラム
 #include <stdio.h>
 #define NUMBER_OF_PRIMES 15
 
 // 素数
 int primes[] = { 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47 };
 
-// 以下は自分で実装する。
 void factorize_primes(int m)
 {
     int counter[NUMBER_OF_PRIMES] = { 0 };
