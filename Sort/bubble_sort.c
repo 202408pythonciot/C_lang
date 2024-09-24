@@ -1,3 +1,4 @@
+// バブルソート
 #include <stdio.h>
 #include <windows.h>
 #define MAX 10
@@ -29,7 +30,6 @@ void printGraph(int* data, int len, int src, int dst) {
 int main(void) {
 	int data[MAX] = {10, 2, 1, 9, 7, 4, 5, 3, 6, 8};
 
-	// バブルソート
 	for (int i = 0; i < MAX - 1; i += 1) {
 		for (int j = MAX - 1; j > i; j -= 1) {
 			printGraph(data, MAX, j, j - 1);
