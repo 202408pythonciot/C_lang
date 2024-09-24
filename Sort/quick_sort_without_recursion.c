@@ -1,3 +1,4 @@
+// クイックソート（再帰呼び出しを使わないバージョン）
 #include <stdio.h>
 #include <windows.h>
 #define MAX 10
@@ -29,8 +30,6 @@ void printGraph(int* data, int len, int src, int dst) {
 
 int main(void) {
 	int data[MAX] = { 10, 2, 1, 9, 7, 4, 5, 3, 6, 8 };
-
-	// クイックソート（再帰呼び出しを使わないバージョン）
 	int left, right, threshold;
 	int i, j, x, tmp, pivot;
 	int leftstack[STACKSIZE], rightstack[STACKSIZE];
