@@ -4,8 +4,8 @@
 #include <time.h>
 #include <windows.h>
 
-#define WIDTH (33)
-#define HEIGHT (21)
+#define WIDTH (33)		// 5以上の奇数
+#define HEIGHT (21)		// 5以上の奇数
 #define WAIT (250)
 
 struct {
