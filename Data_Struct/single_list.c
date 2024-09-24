@@ -8,15 +8,15 @@ typedef struct my_list_node {
 }my_list_node;
 
 // リストにノードを追加
-my_list_node *list_node_append(my_list_node *root) {
+my_list_node *list_node_append(my_list_node *pref) {
 	my_list_node *p;
 	p = malloc(sizeof(*p));
 	if (p == NULL) {
 		return NULL;
 	}
 	p->next = NULL;
-	if (root != NULL) {
-		root->next = p;
+	if (pref != NULL) {
+		pref->next = p;
 	}
 	return p;
 }
