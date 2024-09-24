@@ -14,7 +14,7 @@ int main(void)
     scanf("%lu", &n);
     printf("\n");
     while (n > 1) {
-        if (n & 1) {  /* 奇数 */
+        if (n & 1) {  // 奇数
             if (n > LIMIT) {
                 printf("\nOverflow\n");  return 1;
             }
@@ -22,8 +22,8 @@ int main(void)
                 n = 3 * n + 1;
             }
         }
-        else {  /* 偶数 */
-            n /= 2;
+        else {  // 偶数
+            n = n / 2;
         }
         printf(" %lu", n);
     }
