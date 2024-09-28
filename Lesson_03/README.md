@@ -1,4 +1,4 @@
-# 3章
+# 3章 変数
 ## サンプルコード
 | セクション | ファイル名 | 内容 |
 | ---      | ---      | ---       |
@@ -9,6 +9,5 @@
 | 3.6 キーボードからの入力 | [Sample5.c](https://github.com/202408pythonciot/C_lang/blob/main/Lesson_03/Sample/Sample5.c) | 整数を入力する |
 | 3.6 | [Sample6.c](https://github.com/202408pythonciot/C_lang/blob/main/Lesson_03/Sample/Sample6.c) | 小数を入力する |
 | 3.6 | [Sample7.c](https://github.com/202408pythonciot/C_lang/blob/main/Lesson_03/Sample/Sample7.c) | 文字を入力する |
-
 
 
