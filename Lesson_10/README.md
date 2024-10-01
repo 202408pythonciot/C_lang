@@ -2,9 +2,9 @@
 ## サンプルコード
 | セクション | ファイル名 | 内容 |
 | ---      | ---      | ---       |
-| 10.1 | [Sample1.c](https://github.com/202408pythonciot/C_lang/blob/main/Lesson_10/Sample/Sample1.c) |  |
-| 10.1 | [Sample2.c](https://github.com/202408pythonciot/C_lang/blob/main/Lesson_10/Sample/Sample2.c) |  |
-| 10.1 | [Sample3.c](https://github.com/202408pythonciot/C_lang/blob/main/Lesson_10/Sample/Sample3.c) |  |
+| 10.1 配列とポインタの関係 | [Sample1.c](https://github.com/202408pythonciot/C_lang/blob/main/Lesson_10/Sample/Sample1.c) | 配列名のアドレスを知る |
+| 10.1 | [Sample2.c](https://github.com/202408pythonciot/C_lang/blob/main/Lesson_10/Sample/Sample2.c) | 配列名を使う |
+| 10.1 | [Sample3.c](https://github.com/202408pythonciot/C_lang/blob/main/Lesson_10/Sample/Sample3.c) | 配列名から先頭要素の値を知る |
 | 10.1 | [Sample4.c](https://github.com/202408pythonciot/C_lang/blob/main/Lesson_10/Sample/Sample4.c) |  |
 | 10.1 | [Sample5.c](https://github.com/202408pythonciot/C_lang/blob/main/Lesson_10/Sample/Sample5.c) |  |
 | 10.1 | [Sample6.c](https://github.com/202408pythonciot/C_lang/blob/main/Lesson_10/Sample/Sample6.c) |  |
