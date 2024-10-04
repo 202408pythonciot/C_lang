@@ -13,8 +13,6 @@ int rand();
 #include <stdio.h>
 #include <time.h>
 
-int rand();
-
 int main(void){
     srand((unsigned int) time(NULL)); //現在時刻を元に種を生成
     printf("%d\n", rand());
