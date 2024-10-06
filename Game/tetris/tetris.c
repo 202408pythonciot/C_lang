@@ -513,6 +513,8 @@ void drawMessage(void) {
     cursor(15, 5);
     printf("SCORE: %d", SCORE);
 }
+
+// メインループ
 void loop(void) {
     int count = 0;
     int linecheck_flag = 0;
@@ -540,4 +542,5 @@ void loop(void) {
 int main(void) {
     init();
     loop();
+    return 0;
 }
