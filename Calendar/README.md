@@ -34,14 +34,17 @@ int check_leap_year(int year){
 365Y + \frac{Y}{4} - \frac{Y}{100} + \frac{Y}{400}  + \frac{306(M + 1)}{10} + D - 428 
 ```
 となる。曜日計算はこの式の7の剰余を求めればよい。
+
 ```math
 (365(Y - 1) +  + \frac{Y}{4} - \frac{Y}{100} + \frac{Y}{400}  + \frac{306(M + 1)}{10} + D - 428 ) \mod 7
 ```
-日曜日が$`0`$になるように補正すると。
-
 
 ```math
-wday = (y + \frac{y}{4} - \frac{y}{100} + \frac{y}{400} + \frac{13m + 8}{5} + d) \mod 7
+((Y - 1) +  + \frac{Y}{4} - \frac{Y}{100} + \frac{Y}{400}  + \frac{5(M + 1)}{10} + D - 1 ) \mod 7
+```
+
+```math
+(Y + \frac{Y}{4} - \frac{Y}{100} + \frac{Y}{400} + \frac{13M + 8}{5} + D) \mod 7
 ```
 
 これをツェラーの公式（Zeller's congruence）という。
